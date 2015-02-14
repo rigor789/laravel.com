@@ -51,7 +51,8 @@ class DocsController extends Controller {
 
 		return view('docs', [
 			'index' => $this->docs->getIndex($version),
-			'content' => $content,
+			'title' => ucfirst($page),
+            'content' => $content,
 			'currentVersion' => $version,
 			'versions' => $this->getDocVersions(),
 		]);
